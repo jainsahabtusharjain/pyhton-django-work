@@ -1,0 +1,14 @@
+https://www.geeksforgeeks.org/python-mysql/
+https://www.geeksforgeeks.org/python-mysql-create-database/
+
+https://www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3
+https://www.geeksforgeeks.org/python-sqlite-connecting-to-database/
+https://www.geeksforgeeks.org/python-sqlite-crud-operations/
+https://www.youtube.com/watch?v=anaCtJsKTfA&t=11s
+https://www.sqlite.org/datatype3.html
+https://www.geeksforgeeks.org/introduction-to-sqlite-in-python/
+
+
+https://www.geeksforgeeks.org/python-database-management-in-postgresql/?ref=rp
+https://www.youtube.com/watch?v=M2NzvnfS-hI
+https://www.geeksforgeeks.org/python-postgresql-create-database/
