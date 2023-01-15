@@ -1,0 +1,10 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% block title %}Question{% endblock %}
+{% block content %}
+<div style="background-color: burlywood;" class="card my-4 p-5 text-centre">
+    <h3 style="color: aqua;" class="my-4">Please Come After 24 Hours later</h3>
+    <br>
+    <a style="color: aqua;" href="{% url 'logout' %}">LOGOUT</a>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "app_mysql/base.html" %}
+{% block title %}add-student{% endblock title %}
+{% block content %}
+<section class="container">
+    <div class="row justify-content-around text-center text-white mt-5">
+        <div class="col-sm-8">
+            <h3>THIS IS DJANGO CRUD PROJECT</h3>  
+        </div>
+    </div>    
+    <div class="row justify-content-around mt-3">
+        <div class="col-sm-4">
+            <form method="POST" action="" class="bg-secondary p-3 rounded shadow">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+        
+</section>
+<!-- <div class="row">
+    <div class="col-12">
+        <form method="POST" action="">
+        {% csrf_token %}
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <td><input value="{{question.opt_1}}" id="option_1" name="answer" type="radio" /></td>
+                    <th><label for="option_1">{{question.opt_1}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_2}}" id="option_2" name="answer" type="radio" /></td>
+                    <th><label for="option_2">{{question.opt_2}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_3}}" id="option_3" name="answer" type="radio" /></td>
+                    <th><label for="option_3">{{question.opt_3}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_4}}" id="option_4" name="answer" type="radio" /></td>
+                    <th><label for="option_4">{{question.opt_4}}</label></th>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer">
+            <input name="skip" type="submit" value="Skip" class="btn btn-warning skipBtn" />
+            <input name="submit" type="submit" value="submit" class="btn btn-success submitBtn" />
+        </div>
+        </form>
+    </div>
+</div> -->
+{% endblock content %}

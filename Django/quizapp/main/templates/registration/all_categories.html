@@ -1,0 +1,15 @@
+{% extends 'registration/base.html' %}
+{% block title %}ALL_CATEGORIES{% endblock %}
+{% block content %}
+    <h2 class = "my-4">ALL_CATEGORIES</h2> 
+    {% for category in data %}
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% url 'category_questions' category.id %}"><img src="{{category.image.url}}" class="card-img-top" alt="{{category.title}}"></a>
+            <div class="card-body">
+                <h4 class="card-title"><a href="{% url 'category_questions' category.id %}">{{category.title}}</a></h4>
+            </div>
+        </div>
+    </div>
+    {% endfor %}   
+{% endblock  %}

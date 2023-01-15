@@ -1,0 +1,52 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% block title %}{{category.title}}-Question{% endblock %}
+{% block content %}
+<h2 class="my-4">Category: <span style="color: wheat;">{{category.title}}</span></h2>
+<div class="card my-4 border border-danger shadow ">
+    <h4 class="card-header border-danger">{{question.question}}</h4>
+    <form method="POST" action="{% url 'submit_answer' category.id question.id %}">
+        {% csrf_token %}
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <td><input value="{{question.opt_1}}" id="option_1" name="answer" type="radio" /></td>
+                    <th><label for="option_1">{{question.opt_1}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_2}}" id="option_2" name="answer" type="radio" /></td>
+                    <th><label for="option_2">{{question.opt_2}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_3}}" id="option_3" name="answer" type="radio" /></td>
+                    <th><label for="option_3">{{question.opt_3}}</label></th>
+                </tr>
+                <tr>
+                    <td><input value="{{question.opt_4}}" id="option_4" name="answer" type="radio" /></td>
+                    <th><label for="option_4">{{question.opt_4}}</label></th>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer">
+            <input name="skip" type="submit" value="Skip" class="btn btn-warning skipBtn" />
+            <input name="submit" type="submit" value="submit" class="btn btn-success submitBtn" />
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".submitBtn").on('click',function(){
+            var _checkedAns = $("input[name = 'answer']:checked").val();
+            if(_checkedAns == undefined){
+                alert ("Please choose an option !!")
+                return false;
+            }
+            else{
+                console.log(_checkedAns)
+            }
+        })
+    });
+</script>
+{% endblock %}

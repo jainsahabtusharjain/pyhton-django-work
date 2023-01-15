@@ -1,0 +1,13 @@
+{% extends 'registration/base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div style="color: #666;text-align: center;background-color: blanchedalmond;">
+    <h2>WELCOME TO HOME PAGE</h2>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">LOGOUT</a>
+    {% else %}
+    <h3>Please Login First !!</h3>
+    <!-- <a href="{% url 'login' %}">LOGIN</a> -->
+    {% endif %}
+</div>
+{% endblock %}
