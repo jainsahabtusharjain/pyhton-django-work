@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        
+        body {
+            font-family: var(--bs-font-sans-serif);
+
+            margin: 0;
+
+            padding: 0;
+
+            font-family: sans-serif;
+
+            background: #252552 ;
+
+        }
+
+        .box {
+
+            width: 500px;
+
+            padding: 50px;
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background: #191919;
+
+            text-align: center;
+
+        }
+
+        .box h3 {
+
+            color: white;
+
+            text-transform: uppercase;
+
+            font-weight: 500;
+
+        }
+
+        .box a,
+        .box a {
+
+            border: 0;
+
+            background: none;
+
+            display: block;
+
+            margin: 20px auto;
+
+            text-align: center;
+
+            border: 2px solid #3498db;
+
+            padding: 14px 10px;
+
+            width: 200px;
+
+            outline: none;
+
+            color: white;
+
+            border-radius: 24px;
+
+            transition: 0.25s;
+
+        }
+
+        .box a:focus,
+        .box a:focus {
+
+            width: 280px;
+
+            border-color: #2ecc71;
+
+        }
+
+        .box a {
+
+            border: 0;
+
+            background: none;
+
+            display: block;
+
+            margin: 20px auto;
+
+            text-align: center;
+
+            border: 2px solid #2ecc71;
+
+            padding: 14px 40px;
+
+            outline: none;
+
+            color: white;
+
+            border-radius: 24px;
+
+            transition: 0.25s;
+
+            cursor: pointer;
+
+        }
+
+        .box a:hover {
+
+            background: #2ecc71;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form class="box">
+
+        <h3>Welcome to the home page please select accordingly</h3>
+
+        <!-- <button type="button" onclick=`window.location.href="{% url 'signup' %}" `>Sign up</button> -->
+        <br><br>
+
+        <a style=color:white href="{% url 'signup' %}">signup</a>
+
+        <h3>click here to signup</h3>
+        <br>
+
+        <a style=color:white href="{% url 'userlogin' %}">Login</a>
+
+        <h3>click here to login</h3>
+
+
+    </form>
+
+    <!-- Welcome to the home page please select accordingly
+    <br><br>
+    <a href="{% url 'signup' %}">signup</a> <h3>click here to signup</h3>
+    <br>
+    <a href="{% url 'userlogin' %}">Login</a><h3>click here to login</h3> -->
+</body>
+
+</html>
